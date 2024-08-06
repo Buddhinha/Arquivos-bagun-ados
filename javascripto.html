@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+  margin-top: 40px;          
+  font-family: Rubik;
+  font-size: 25px;
+  margin-top: 39px;
+} 
+h1{
+    font-size: 70px;
+}
+input{
+    font-size:40px;
+}
+
+ 
+    
+
+    </style>
+</head>
+<body>
+    <center>
+    <h1>Sistema de multas</h1>
+    <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar" onclick="calcular()"> km/h
+    <div id="res"></div>
+    <div id="multa"></div>
+    <div id="msg"></div>
+
+   </center>    
+    <script>
+       function calcular(){
+        var txtv = window.document.getElementById('txtvel')
+        var vel = Number(txtv.value)
+        var res = window.document.getElementById('res')
+        var msg = window.document.getElementById('msg')
+        var verifica = window.document.getElementById('multa')
+        res.innerText = `sua velocidade é ${vel}km/h`;
+
+      if(vel>60){
+        verifica.innerText += `Voce ultrapassou o limite de velocidade.MULTADO!`
+      }
+        
+        msg.innerText = `Dirija sempre com segurança!`
+       }       
+        
+    </script>
+</body>
+</html>
