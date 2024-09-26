@@ -1,26 +1,48 @@
- function carregar(){
-    var msg = window.document.getElementById('msg')
-    var img = window.document.getElementById('imagem')
-    var data = new Date()
-    var hora = data.getHours()
-    msg.innerHTML = `Agora são ${hora} horas.`
-    
-    if (hora >= 0 && hora < 12) {
-        //good morning 
-        img.src = "imgs/demanha.png"
-        document.body.style.background = '#66c1f1' 
-    }
+/*
+var conteudo = document.getElementById("conteudo")
+var conteudo = ["link1","link2","link3"]
+var link1 = document.createElement('img')
 
-    else if (hora >= 12 && hora < 18) {
-        // good afternon  
-         img.src = "imgs/tarde.png"
-         document.body.style.background = '#cbaf30'  
-    }
+var link2 = "panfleto numero 2"
+var link3 = "panfleto numero 3"
+console.log(conteudo)
 
-    else {
-        //good night  
-        img.src = "imgs/noite.png"
-        document.body.style.background = '#1e4a71'
-    }
+var img = document.createElement('img');
+*/
 
-}
+// Seleciona a div onde a imagem será inserida (substitua "myDiv" pelo ID da sua div)
+const div = document.getElementById('conteudo');
+
+// Cria um novo elemento de imagem
+const panfleto1 = document.createElement('img');
+
+// Define o atributo src com o caminho da imagem
+panfleto1.src = 'file:///C:/Users/Andr%C3%A9/Downloads/download.jfif';
+
+// Define atributos opcionais (largura, altura, etc.)
+panfleto1.width = 200;
+panfleto1.height = 150;
+panfleto1.alt = 'Descrição da imagem';
+
+// Adiciona a imagem à div
+div.appendChild(panfleto1);
+
+
+
+// Seleciona a div onde a imagem será inserida (substitua "myDiv" pelo ID da sua div)
+
+// Cria um novo elemento de imagem
+const panfleto2 = document.createElement('img');
+
+// Define o atributo src com o caminho da imagem
+panfleto2.src = 'file:///C:/Users/Andr%C3%A9/Downloads/download%20(1).jfif';
+
+// Define atributos opcionais (largura, altura, etc.)
+panfleto2.width = 200;
+panfleto2.height = 150;
+panfleto2.alt = 'Descrição da imagem';
+
+// Adiciona a imagem à div
+div.appendChild(panfleto2);
+
+
